@@ -1,3 +1,2 @@
-﻿Console.WriteLine("1232");
-Console.WriteLine("1232");
-Console.WriteLine("1232");
+﻿using Hw_4;
+Variables.Equation();
