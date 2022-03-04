@@ -20,6 +20,9 @@
 //int b = Convert.ToInt32(Console.ReadLine());
 //Console.WriteLine(Condition.ChooseOperation(a,b));
 
-int x = Convert.ToInt32(Console.ReadLine());
-int y = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(Condition.DefineQuart(x,y));
+//int x = Convert.ToInt32(Console.ReadLine());
+//int y = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine(Condition.DefineQuart(x,y));
+
+int nomber = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(Condition.ConvertToInscription(nomber));
