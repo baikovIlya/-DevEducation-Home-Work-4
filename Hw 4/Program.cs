@@ -14,7 +14,7 @@
 //int task5y1 = Convert.ToInt32(Console.ReadLine());
 //int task5x2 = Convert.ToInt32(Console.ReadLine());
 //int task5y2 = Convert.ToInt32(Console.ReadLine());
-//Console.WriteLine(Variables.TwoPoints(task5x1, task5y1, task5x2, task5y2));
+//Console.WriteLine(Variables.GetEquation(task5x1, task5y1, task5x2, task5y2));
 
 //int a = Convert.ToInt32(Console.ReadLine());
 //int b = Convert.ToInt32(Console.ReadLine());
@@ -24,5 +24,12 @@
 //int y = Convert.ToInt32(Console.ReadLine());
 //Console.WriteLine(Condition.DefineQuart(x,y));
 
-int nomber = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(Condition.ConvertToInscription(nomber));
+//int nomber = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine(Condition.ConvertToInscription(nomber));
+
+//double a = 0;
+//double b = -3;
+//Console.WriteLine(Cycles.Exponentiate(a,b));
+
+int a = Cycles.GetSquears(10);
+Console.WriteLine(a);
