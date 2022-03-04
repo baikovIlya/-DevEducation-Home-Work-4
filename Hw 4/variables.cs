@@ -52,5 +52,27 @@ namespace Hw_4
             }
             return a;
         }
+        public static string DefineQuart(int x, int y)
+        {
+            string result;
+            if (x == 0 || y == 0)
+            {
+                result = "Точка лежит на оси";
+            }
+            else if (x > 0 && y > 0)
+            {
+                result = "I четверь";
+            }
+            else if (x < 0 && y > 0)
+            {
+                result = "II четверь";
+            }
+            else if (x < 0 && y < 0)
+            {
+                result = "III четверть";
+            }
+            else result = "IV четверть";
+            return result;
+        }
     }
 }
