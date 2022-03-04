@@ -33,4 +33,24 @@ namespace Hw_4
             return result;
         }
     }
+    
+    static class Condition
+    {
+        public static int ChooseOperation(int a,int b)
+        {
+            if (a > b)
+            {
+                a = a + b;
+            }
+            else if (a == b)
+            {
+                a = a * b;
+            }
+            else 
+            {
+                a = a - b;
+            }
+            return a;
+        }
+    }
 }
