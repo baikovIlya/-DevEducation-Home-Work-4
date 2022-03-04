@@ -31,5 +31,16 @@
 //double b = -3;
 //Console.WriteLine(Cycles.Exponentiate(a,b));
 
-int a = Cycles.GetSquears(10);
-Console.WriteLine(a);
+//int a = Cycles.GetSquears(10);
+//Console.WriteLine(a);
+
+//int a = 15;
+//a = Cycles.SearchLargestDivisor(a);
+//Console.WriteLine(a);
+
+//Console.WriteLine(Cycles.GetSevens(13, 22));
+
+
+//Console.WriteLine(Cycles.SearchFibonacci(7));
+
+//Console.WriteLine(Cycles.SearchGCD(125, 25));

@@ -160,5 +160,73 @@ namespace Hw_4
             int result = Convert.ToInt32(Math.Truncate(Math.Sqrt(a)));
             return result;
         }
+
+        public static int SearchLargestDivisor(int a)
+        {
+            int tmp = 1;
+            for (int i = 2; i <= a / 2; i++)
+            {
+                if (a % i == 0)
+                    tmp = i;
+            }
+            return tmp;
+        }
+        public static int GetSevens(int a, int b)
+        {
+            int result = 0;
+            if (a < b)
+            {
+                for (int i = a; i <= b; i++)
+                {
+                    if (i % 7 == 0)
+                        result += i;
+                }
+            }
+            else
+            {
+                for (int i = b; i <= a; i++)
+                {
+                    if (i % 7 == 0)
+                        result += i;
+                }
+            }
+            return result;
+        }
+        public static int SearchFibonacci(int a)
+        {
+            int fib1 = 1;
+            int fib2 = 1;
+            int result = 1;
+            for (int i = 3; i <= a; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    result = fib1 + fib2;
+                    fib1 = result;
+                }
+                else
+                {
+                    result = fib1 + fib2;
+                    fib2 = result;
+                }
+            }
+            return result;
+        }
+        public static int SearchGCD(int a, int b)
+        {
+            while (a != 0 && b != 0)
+            {
+                if (a > b)
+                {
+                    a %= b;
+                }
+                else
+                {
+                    b %= a;
+                }
+            }
+            return (a + b);
+        }
+
     }
 }
