@@ -13,7 +13,6 @@ namespace Hw_4
             double result = (5 * a + b * b) / (b - a);
             return result;
         }
-
         
         public static double SearchX(int a,int b,int c)
         {
@@ -21,7 +20,6 @@ namespace Hw_4
             return x;
         }
 
-        
         public static string GetEquation(int x1,int y1, int x2,int y2)
         {
             double a = (y1 - y2) / (x1 - x2);
@@ -154,7 +152,6 @@ namespace Hw_4
             return tmp;
         }
 
-
         public static int GetSquears(int a)
         {
             int result = Convert.ToInt32(Math.Truncate(Math.Sqrt(a)));
@@ -171,6 +168,7 @@ namespace Hw_4
             }
             return tmp;
         }
+
         public static int GetSevens(int a, int b)
         {
             int result = 0;
@@ -192,6 +190,7 @@ namespace Hw_4
             }
             return result;
         }
+        
         public static int SearchFibonacci(int a)
         {
             int fib1 = 1;
@@ -212,6 +211,7 @@ namespace Hw_4
             }
             return result;
         }
+        
         public static int SearchGCD(int a, int b)
         {
             while (a != 0 && b != 0)
