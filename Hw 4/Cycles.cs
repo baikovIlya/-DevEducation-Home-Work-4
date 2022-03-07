@@ -6,7 +6,123 @@ using System.Threading.Tasks;
 
 namespace Hw_4
 {
-    internal class Class1
+    static class Cycles
     {
+        //3.1
+        public static double Exponentiate(double a, double b)
+        {
+            double tmp = 1;
+            for (int i = 1; i <= Math.Abs(b); i++)
+            {
+                tmp *= a;
+            }
+            if (b < 0)
+            {
+                tmp = 1 / tmp;
+            }
+            return tmp;
+        }
+
+        //3.3
+        public static int GetSquears(int a)
+        {
+            int result = Convert.ToInt32(Math.Truncate(Math.Sqrt(a)));
+            return result;
+        }
+
+        //3.4
+        public static int SearchLargestDivisor(int a)
+        {
+            int tmp = 1;
+            for (int i = 2; i <= a / 2; i++)
+            {
+                if (a % i == 0)
+                    tmp = i;
+            }
+            return tmp;
+        }
+
+        //3.5
+        public static int GetSevens(int a, int b)
+        {
+            int result = 0;
+            if (a < b)
+            {
+                for (int i = a; i <= b; i++)
+                {
+                    if (i % 7 == 0)
+                        result += i;
+                }
+            }
+            else
+            {
+                for (int i = b; i <= a; i++)
+                {
+                    if (i % 7 == 0)
+                        result += i;
+                }
+            }
+            return result;
+        }
+
+        //3.6
+        public static int SearchFibonacci(int a)
+        {
+            int fib1 = 1;
+            int fib2 = 1;
+            int result = 1;
+            for (int i = 3; i <= a; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    result = fib1 + fib2;
+                    fib1 = result;
+                }
+                else
+                {
+                    result = fib1 + fib2;
+                    fib2 = result;
+                }
+            }
+            return result;
+        }
+
+        //3.7
+        public static int SearchGCD(int a, int b)
+        {
+            while (a != 0 && b != 0)
+            {
+                if (a > b)
+                {
+                    a %= b;
+                }
+                else
+                {
+                    b %= a;
+                }
+            }
+            return (a + b);
+        }
+
+        //3.8
+        public static int SearchThirdRoot(int a)
+        {
+            int leftSide = 0;
+            int rightSide = a;
+            int newLimit = 0;
+            while (leftSide * leftSide * leftSide != a && rightSide * rightSide * rightSide != a)
+            {
+                newLimit = (leftSide + rightSide) / 2;
+                if (newLimit * newLimit * newLimit > a)
+                {
+                    rightSide = newLimit;
+                }
+                else
+                {
+                    leftSide = newLimit;
+                }
+            }
+            return newLimit;
+        }
     }
 }

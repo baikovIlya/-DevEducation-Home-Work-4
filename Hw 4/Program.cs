@@ -43,4 +43,6 @@
 
 //Console.WriteLine(Cycles.SearchFibonacci(7));
 
-//Console.WriteLine(Cycles.SearchGCD(125, 25));
+//Console.WriteLine(Cycles.SearchGCD(125, 75));
+
+Console.WriteLine(Cycles.SearchThirdRoot(64));
