@@ -45,4 +45,10 @@
 
 //Console.WriteLine(Cycles.SearchGCD(125, 75));
 
-Console.WriteLine(Cycles.SearchThirdRoot(64));
+//Console.WriteLine(Cycles.SearchThirdRoot(64));
+
+//Console.WriteLine(Cycles.SearchAmountOdd(123536));
+
+//Console.WriteLine(Cycles.MirrorNumber(2354));
+
+Console.WriteLine(Cycles.SearchSameNombers(23, 1));

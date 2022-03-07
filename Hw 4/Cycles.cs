@@ -124,5 +124,51 @@ namespace Hw_4
             }
             return newLimit;
         }
+
+        //3.9
+        public static int SearchAmountOdd(int a)
+        {
+            int tmp;
+            int result = 0;
+            while (a != 0)
+            {
+                tmp = a % 10;
+                if (tmp % 2 != 0)
+                    result++;
+                a /= 10;
+            }
+            return result;
+        }
+
+        //3.10
+        public static int MirrorNumber(int a)
+        {
+            int tmp1 = 0;
+            while (a != 0)
+            {
+                tmp1 = tmp1 * 10 + a % 10;
+                a /= 10;
+            }
+            return tmp1;
+        }
+
+        //3.12
+        public static bool SearchSameNombers(int a, int b)
+        {
+            bool flag = false;
+            while (a != 0)
+            {
+                int tmp = a % 10;
+                for (int i = b; i != 0; i /= 10)
+                {
+                    if (tmp == i % 10)
+                    {
+                        flag = true;
+                    }
+                }
+                a /= 10;
+            }
+            return flag;
+        }
     }
 }
