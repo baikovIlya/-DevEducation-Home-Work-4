@@ -51,4 +51,10 @@
 
 //Console.WriteLine(Cycles.MirrorNumber(2354));
 
-Console.WriteLine(Cycles.SearchSameNombers(23, 1));
+//Console.WriteLine(Cycles.SearchSameNombers(23, 1));
+
+int q ;
+int w ;
+Variables.DevAndRes(10,3, out q, out w);
+Console.WriteLine(q);
+Console.WriteLine(w);

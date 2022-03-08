@@ -8,18 +8,28 @@ namespace Hw_4
 {
     static class Variables
     {
+        //1.1
+        public static void DevAndRes(int a, int b, out int rez1, out int rez2)
+        {
+            rez1 = a / b;
+            rez2 = a % b;
+        }
+        
+        //1.2
         public static double Equation(int a,int b)
         {
             double result = (5 * a + b * b) / (b - a);
             return result;
         }
         
+        //1.4
         public static double SearchX(int a,int b,int c)
         {
             double x = (double)(c - b) / a;
             return x;
         }
 
+        //1.5
         public static string GetEquation(int x1,int y1, int x2,int y2)
         {
             double a = (y1 - y2) / (x1 - x2);
