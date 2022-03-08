@@ -53,8 +53,14 @@
 
 //Console.WriteLine(Cycles.SearchSameNombers(23, 1));
 
-int q ;
-int w ;
-Variables.DevAndRes(10,3, out q, out w);
-Console.WriteLine(q);
-Console.WriteLine(w);
+//int q ;
+//int w ;
+//Variables.DevAndRes(10,3, out q, out w);
+//Console.WriteLine(q);
+//Console.WriteLine(w);
+
+int a = 10;
+int b = 20;
+Variables.Swap(ref a, ref b);
+Console.WriteLine(a);
+Console.WriteLine(b);

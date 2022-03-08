@@ -22,6 +22,13 @@ namespace Hw_4
             return result;
         }
         
+        //1.3
+        public static void Swap(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
         //1.4
         public static double SearchX(int a,int b,int c)
         {
