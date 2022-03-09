@@ -8,6 +8,7 @@ namespace Hw_4
 {
     static class Condition
     {
+        //2.1
         public static int ChooseOperation(int a, int b)
         {
             if (a > b)
@@ -24,6 +25,8 @@ namespace Hw_4
             }
             return a;
         }
+
+        //2.2
         public static string DefineQuart(int x, int y)
         {
             string result;
@@ -46,6 +49,71 @@ namespace Hw_4
             else result = "IV четверть";
             return result;
         }
+
+        //2.3
+        public static int[] Sort(int a, int b, int c)
+        {
+            int[] result = new int[3];
+            if (a > b && a > c)
+            {
+                if (b > c)
+                {
+                    result[0] = c;
+                    result[1] = b;
+                    result[2] = a;
+                }
+                else
+                {
+                    result[0] = b;
+                    result[1] = c;
+                    result[2] = a;
+                }
+
+            }
+            else if (b > a && b > c)
+            {
+                if (a > c)
+                {
+                    result[0] = c;
+                    result[1] = a;
+                    result[2] = b;
+                }
+                else
+                {
+                    result[0] = a;
+                    result[1] = c;
+                    result[2] = b;
+                }
+            }
+            else if (a > b)
+            {
+                result[0] = b;
+                result[1] = a;
+                result[2] = c;
+            }
+            else
+            {
+                result[0] = a;
+                result[1] = b;
+                result[2] = c;
+            }
+            return result;
+        }
+
+        //2.4
+        public static double[] SolveQuadEquation(double a, double b, double c)
+        {
+            double[] result = new double[2];
+            double d = (b * b) - (4 * a * c);
+            if (d >= 0)
+            {
+                result[0] = (-b + Math.Sqrt(d)) / (2 * a);
+                result[1] = (-b - Math.Sqrt(d)) / (2 * a);
+            }
+            return result;
+        }
+
+        //2.5
         public static string ConvertToInscription(int nomber)
         {
             string result = "";
@@ -111,6 +179,6 @@ namespace Hw_4
             }
             return result;
         }
-    }
 
+    }     
 }

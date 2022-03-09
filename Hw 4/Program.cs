@@ -59,8 +59,20 @@
 //Console.WriteLine(q);
 //Console.WriteLine(w);
 
-int a = 10;
-int b = 20;
-Variables.Swap(ref a, ref b);
-Console.WriteLine(a);
-Console.WriteLine(b);
+//int a = 10;
+//int b = 20;
+//Variables.Swap(ref a, ref b);
+//Console.WriteLine(a);
+//Console.WriteLine(b);
+
+//int[] qwe = new int[3];
+//qwe = Condition.Sort(20, 33, 41);
+//for (int i = 0; i < qwe.Length; i++)
+//{
+//    Console.WriteLine(qwe[i]);
+//}
+
+//double[] qwe = new double[2];
+//qwe = Condition.SolveQuadEquation(2,4,2);
+//Console.WriteLine(qwe[0]);
+//Console.WriteLine(qwe[1]);

@@ -29,6 +29,7 @@ namespace Hw_4
             a = b;
             b = temp;
         }
+
         //1.4
         public static double SearchX(int a,int b,int c)
         {
