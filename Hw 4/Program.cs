@@ -76,3 +76,9 @@
 //qwe = Condition.SolveQuadEquation(2,4,2);
 //Console.WriteLine(qwe[0]);
 //Console.WriteLine(qwe[1]);
+
+//int[] a = Cycles.FindDivisibleNumbers(300);
+//for (int i = 0; i < a.Length; i++)
+//{
+//    Console.WriteLine(a[i]);
+//}

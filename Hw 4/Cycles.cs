@@ -23,6 +23,23 @@ namespace Hw_4
             return tmp;
         }
 
+        //3.2
+        public static int[] FindDivisibleNumbers(int a)
+        {
+            int amont_of_solution = 0;
+            for (int i =a; i<1000; i+=a)
+            {
+                amont_of_solution++;
+            }
+            int[] result = new int[amont_of_solution];
+            result[0] = a;
+            for (int i =1; i<amont_of_solution; i++)
+            {
+                result[i] =result[i-1] + a;
+            }
+            return result;
+        }
+
         //3.3
         public static int GetSquears(int a)
         {
