@@ -104,6 +104,21 @@ namespace Hw_4
             return result;
         }
 
+        //4.8
+        public static int[] ReverseOfHalf(int[] ar)
+        {
+            int[] result = Copy(ar);
+            int tmp;
+            for (int i = 0; i < ar.Length / 2; i++)
+            {
+                tmp = result[ar.Length - i - 1];
+                result[ar.Length - i - 1] = result[ar.Length/2 -i -1];
+                result[ar.Length/2 - i - 1] = tmp;
+                Write(result);
+            }
+            return result;
+        }
+
         public static int[] Copy(int[] ar)
         {
             int[] newArray = new int[ar.Length];
