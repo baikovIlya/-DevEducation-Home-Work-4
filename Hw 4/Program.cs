@@ -88,3 +88,11 @@
 //{
 //    Console.WriteLine(rez[i]);
 //}
+
+int[] a = ArrayControl.GenerateRandom(6);
+ArrayControl.Write(a);
+int b;
+b = ArrayControl.GetIndexOfMin(a);
+Console.WriteLine(b);
+b = ArrayControl.GetIndexOfMax(a);
+Console.WriteLine(b);

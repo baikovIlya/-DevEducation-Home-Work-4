@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hw_4
 {
-    internal class ArrayController
+    internal class ArrayControl
     {
         //4.1
         public static int SearchMin(int[] ar)
@@ -37,7 +37,35 @@ namespace Hw_4
         }
 
         //4.3
+        public static int GetIndexOfMin(int[]ar)
+        {
+            int min = ar[0];
+            int index_of_min = 0;
+            for (int i = 0; i < ar.Length; i++)
+            {
+                if (ar[i] < min)
+                {
+                    index_of_min = i;
+                }
+            }
+            return index_of_min;
+        }
 
+        //4.4
+        public static int GetIndexOfMax(int[] ar)
+        {
+            int index_of_max = 0;
+            int max = ar[0];
+            for (int i = 0; i < ar.Length; i++)
+            {
+                if (ar[i] > max)
+                {
+                    max = ar[i];
+                    index_of_max = i;
+                }
+            }
+            return index_of_max;
+        }
 
         public static int[] Copy(int[] ar)
         {
