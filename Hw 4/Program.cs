@@ -90,13 +90,8 @@
 //}
 
 
-int[,] a = TwoDimArrayCtrl.GenerateRandom(3, 3, 0, 101);
+int[,] a = TwoDimArrayCtrl.GenerateRandom(4, 4, 10, 100);
 TwoDimArrayCtrl.Write(a);
-int m = TwoDimArrayCtrl.SearchMin(a);
-Console.WriteLine(m);
-m = TwoDimArrayCtrl.SearchMax(a);
-Console.WriteLine(m);
-int[] im = TwoDimArrayCtrl.SearchIndexOfMin(a);
-ArrayControl.Write(im);
-im = TwoDimArrayCtrl.SearchIndexOfMax(a);
-ArrayControl.Write(im);
+Console.WriteLine();
+int[,] b = TwoDimArrayCtrl.FlipDiagonally(a);
+TwoDimArrayCtrl.Write(b);

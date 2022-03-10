@@ -78,6 +78,28 @@ namespace Hw_4
             return result;
         }
 
+        //5.6
+        public static int[,] FlipDiagonally(int[,] ar)
+        {
+            int[,] result = Copy(ar);
+            for (int i = 0; i < ar.GetLength(0); i++)
+            {
+                for (int j = i+1; j < ar.GetLength(1); j++)
+                {
+                    int tmp = result[i, j];
+                    result[i, j] = result[j,i];
+                    result[j,i] = tmp;
+                }
+            }
+            return result;
+        }
+
+        public static int[,] Copy(int[,] ar)
+        {
+            int[,] newArray = new int[ar.GetLength(0),ar.GetLength(1)];
+            Array.Copy(ar, newArray, ar.Length);
+            return newArray;
+        }
 
         public static void Write(int[,] ar)
         {
