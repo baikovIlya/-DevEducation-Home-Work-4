@@ -119,6 +119,45 @@ namespace Hw_4
             return result;
         }
 
+        //4,9
+        public static int[] SortAscending(int[] ar)
+        {
+            int[] result = Copy(ar);
+            int tmp;
+            for (int i = 0; i < result.Length; i++)
+            {
+                for (int j =i+1; j<result.Length; j++)
+                {
+                    if (result[i] > result[j])
+                    {
+                        tmp = result[i];
+                        result[i] = result[j];
+                        result[j] = tmp;
+                    }
+                }
+            }
+            return result;
+        }
+
+        //4.10
+        public static int[] SortDescending(int[] ar)
+        {
+            int[] result = Copy(ar);
+            for (int i = 1; i < result.Length; i++)
+            {
+                int current = result[i];
+                int location = i-1;
+                while (location >= 0 && result[location] < current)
+                {
+                    result[location+1] = result[location];
+                    location--;
+                }
+                result[location+1] = current;
+            }
+            return result;
+        }
+
+
         public static int[] Copy(int[] ar)
         {
             int[] newArray = new int[ar.Length];

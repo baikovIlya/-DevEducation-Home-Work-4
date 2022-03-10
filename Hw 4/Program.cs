@@ -89,7 +89,8 @@
 //    Console.WriteLine(rez[i]);
 //}
 
-int[] a = new int[5] { 10, 20, 30, 40, 50};
+int[] a = ArrayControl.GenerateRandom(10, 0, 101);
 ArrayControl.Write(a);
-int[] b = ArrayControl.ReverseOfHalf(a);
+Console.ReadLine();
+int[] b = ArrayControl.SortDescending(a);
 ArrayControl.Write(b);
