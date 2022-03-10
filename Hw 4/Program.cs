@@ -89,8 +89,10 @@
 //    Console.WriteLine(rez[i]);
 //}
 
-int[] a = ArrayControl.GenerateRandom(10, 0, 101);
-ArrayControl.Write(a);
-Console.ReadLine();
-int[] b = ArrayControl.SortDescending(a);
-ArrayControl.Write(b);
+
+int[,] a = TwoDimArrayCtrl.GenerateRandom(3, 3, 0, 101);
+TwoDimArrayCtrl.Write(a);
+int m = TwoDimArrayCtrl.SearchMin(a);
+Console.WriteLine(m);
+m = TwoDimArrayCtrl.SearchMax(a);
+Console.WriteLine(m);
