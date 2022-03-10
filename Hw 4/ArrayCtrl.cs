@@ -67,6 +67,43 @@ namespace Hw_4
             return index_of_max;
         }
 
+        //4.5
+        public static int GetSummOfOddIndex(int[] ar)
+        {
+            int result = 0;
+            for (int i = 1; i < ar.Length; i +=2)
+            {
+                result +=ar[i];
+            }
+            return result;
+        }
+
+        //4.6
+        public static int[] Reverse(int[] ar)
+        {
+            int[] result = Copy(ar);
+            int leng = ar.Length - 1;
+            int tmp;
+            for (int i = 0; i <= leng/2; i++)
+            {
+                tmp = result[i];
+                result[i] = result[leng - i];
+                result[leng - i] = tmp;
+            }
+            return result;
+        }
+
+        //4.7
+        public static int GetSummOfEvenIndex(int[] ar)
+        {
+            int result = 0;
+            for (int i = 0; i < ar.Length; i += 2)
+            {
+                result += ar[i];
+            }
+            return result;
+        }
+
         public static int[] Copy(int[] ar)
         {
             int[] newArray = new int[ar.Length];

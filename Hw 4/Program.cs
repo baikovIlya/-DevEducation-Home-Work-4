@@ -89,10 +89,7 @@
 //    Console.WriteLine(rez[i]);
 //}
 
-int[] a = ArrayControl.GenerateRandom(6);
+int[] a = ArrayControl.GenerateRandom(5);
 ArrayControl.Write(a);
-int b;
-b = ArrayControl.GetIndexOfMin(a);
-Console.WriteLine(b);
-b = ArrayControl.GetIndexOfMax(a);
-Console.WriteLine(b);
+int[] b = ArrayControl.Reverse(a);
+ArrayControl.Write(b);
