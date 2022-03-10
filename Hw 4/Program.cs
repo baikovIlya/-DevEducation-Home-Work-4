@@ -96,3 +96,7 @@ int m = TwoDimArrayCtrl.SearchMin(a);
 Console.WriteLine(m);
 m = TwoDimArrayCtrl.SearchMax(a);
 Console.WriteLine(m);
+int[] im = TwoDimArrayCtrl.SearchIndexOfMin(a);
+ArrayControl.Write(im);
+im = TwoDimArrayCtrl.SearchIndexOfMax(a);
+ArrayControl.Write(im);

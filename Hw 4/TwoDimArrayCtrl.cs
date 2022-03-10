@@ -13,11 +13,15 @@ namespace Hw_4
         {
             int min = ar[0,0];
             for (int i = 0; i < ar.GetLength(0); i++)
+            {
                 for (int j = 0; j < ar.GetLength(1); j++)
-                    if (ar[i,j] < min)
+                {
+                    if (ar[i, j] < min)
                     {
-                        min = ar[i,j];
+                        min = ar[i, j];
                     }
+                }
+            }
             return min;
         }
 
@@ -33,6 +37,47 @@ namespace Hw_4
                     }
             return max;
         }
+
+        //5.3
+        public static int[] SearchIndexOfMin(int[,] ar)
+        {
+            int[] result = new int[2] {0,0};
+            int min = ar[0,0];
+            for (int i = 0; i < ar.GetLength(0); i++)
+            {
+                for (int j = 0; j < ar.GetLength(1); j++)
+                {
+                    if (ar[i, j] < min)
+                    {
+                        min = ar[i, j];
+                        result[0] = i;
+                        result[1] = j;
+                    }
+                }
+            }
+            return result;
+        }
+
+        //5.4
+        public static int[] SearchIndexOfMax(int[,] ar)
+        {
+            int[] result = new int[2] { 0, 0 };
+            int max = ar[0, 0];
+            for (int i = 0; i < ar.GetLength(0); i++)
+            {
+                for (int j = 0; j < ar.GetLength(1); j++)
+                {
+                    if (ar[i, j] > max)
+                    {
+                        max = ar[i, j];
+                        result[0] = i;
+                        result[1] = j;
+                    }
+                }
+            }
+            return result;
+        }
+
 
         public static void Write(int[,] ar)
         {
