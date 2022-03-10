@@ -82,3 +82,9 @@
 //{
 //    Console.WriteLine(a[i]);
 //}
+
+int[] rez = Cycles.SearchEvenNumbers(70);
+for (int i = 0; i < rez.Length; i++)
+{
+    Console.WriteLine(rez[i]);
+}

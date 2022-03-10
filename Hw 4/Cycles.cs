@@ -169,6 +169,66 @@ namespace Hw_4
             return tmp1;
         }
 
+        //3.11
+        public static int[] SearchEvenNumbers(int n)
+        {
+            int amount_of_solution = 0;
+            int even = 0; //чет
+            int odd = 0;  //нечет
+            int tmp;
+            for (int i = 0; i <= n; i++)
+            {
+                int r = i;
+                while (r != 0)
+                {
+                    tmp = r % 10;
+                    if (tmp % 2 == 0)
+                    {
+                        even += tmp;
+                    }
+                    else
+                    {
+                        odd += tmp;
+                    }
+                    r /= 10;
+                }
+                if (even > odd)
+                {
+                    amount_of_solution++;
+                }
+                even = 0;
+                odd = 0;
+            }
+            int[] result = new int[amount_of_solution];
+            tmp = 0;
+            int tmp_nomber = 0;
+            for (int i = 0; i <= n; i++)
+            {
+                int r = i;
+                while (r != 0)
+                {
+                    tmp = r % 10;
+                    if (tmp % 2 == 0)
+                    {
+                        even += tmp;
+                    }
+                    else
+                    {
+                        odd += tmp;
+                    }
+                    r /= 10;
+                }
+                if (even > odd)
+                {
+                    result[tmp_nomber] = i;
+                    tmp_nomber++;
+                }
+                even = 0;
+                odd = 0;
+            }
+            return result;
+        }
+
         //3.12
         public static bool SearchSameNombers(int a, int b)
         {
