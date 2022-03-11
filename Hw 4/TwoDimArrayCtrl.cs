@@ -78,6 +78,28 @@ namespace Hw_4
             return result;
         }
 
+        //5.5
+        public static int CountElemsHigherThanNaibor(int[,] ar)
+        {
+            int count = 0;
+            for (int i = 0; i < ar.GetLength(0); i++)
+            {
+                for (int j = 0; j < ar.GetLength(1); j++)
+                {
+                    if(
+                        (i == 0 || ar[i,j]> ar[i-1,j])
+                        && (i == ar.GetLength(0) - 1 || ar[i,j]> ar[i+1,j])
+                        && (j ==0 || ar[i,j]> ar[i,j-1])
+                        && (j == ar.GetLength(1) - 1 || ar[i,j]> ar[i,j+1])
+                        )
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
         //5.6
         public static int[,] FlipDiagonally(int[,] ar)
         {

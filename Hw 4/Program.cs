@@ -93,5 +93,5 @@
 int[,] a = TwoDimArrayCtrl.GenerateRandom(4, 4, 10, 100);
 TwoDimArrayCtrl.Write(a);
 Console.WriteLine();
-int[,] b = TwoDimArrayCtrl.FlipDiagonally(a);
-TwoDimArrayCtrl.Write(b);
+int b = TwoDimArrayCtrl.CountElemsHigherThanNaibor(a);
+Console.Write(b);
