@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hw_4
 {
-    static class Cycles
+    public static class Cycles
     {
         //3.1
         public static double Exponentiate(double a, double b)

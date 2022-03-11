@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hw_4
 {
-    internal class TwoDimArrayCtrl
+    public static class TwoDimArrayCtrl
     {
         //5.1
         public static int SearchMin(int[,] ar)

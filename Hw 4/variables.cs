@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Hw_4
 {
-    static class Variables
+    public static class Variables
     {
         //1.1
-        public static void DevAndRes(int a, int b, out int rez1, out int rez2)
+        public static void DivAndRes(int a, int b, out int rez1, out int rez2)
         {
             rez1 = a / b;
             rez2 = a % b;

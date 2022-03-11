@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hw_4
 {
-    internal class ArrayControl
+    public static class ArrayControl
     {
         //4.1
         public static int SearchMin(int[] ar)

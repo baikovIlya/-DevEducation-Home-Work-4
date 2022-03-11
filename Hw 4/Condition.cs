@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hw_4
 {
-    static class Condition
+    public static class Condition
     {
         //2.1
         public static int ChooseOperation(int a, int b)
