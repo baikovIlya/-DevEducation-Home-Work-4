@@ -86,7 +86,7 @@ namespace Hw_4
             {
                 for (int j = 0; j < ar.GetLength(1); j++)
                 {
-                    if(
+                    if  (
                         (i == 0 || ar[i,j]> ar[i-1,j])
                         && (i == ar.GetLength(0) - 1 || ar[i,j]> ar[i+1,j])
                         && (j ==0 || ar[i,j]> ar[i,j-1])
