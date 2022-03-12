@@ -9,8 +9,5 @@
 //int b = TwoDimArrayCtrl.CountElemsHigherThanNaibor(a);
 //Console.Write(b);
 
-int[] x = Cycles.FindDivisibleNumbers(0);
-for (int i = 0; i < x.Length; i++)
-{
-    Console.WriteLine(x[i]);
-}
+int x = Cycles.SearchGCD(8,-12);
+Console.WriteLine(x);

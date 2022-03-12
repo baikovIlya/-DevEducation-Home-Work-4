@@ -128,6 +128,12 @@ namespace Hw_4
         //3.7
         public static int SearchGCD(int a, int b)
         {
+            if(a == 0 || b == 0)
+            {
+                throw new ArgumentException("A or B = 0 it has no divisors");
+            }
+            a = Math.Abs(a);
+            b = Math.Abs(b);
             while (a != 0 && b != 0)
             {
                 if (a > b)

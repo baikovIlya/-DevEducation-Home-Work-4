@@ -108,5 +108,24 @@ namespace Hw_4.Test
             Assert.Throws<ArgumentException>(() => Cycles.SearchFibonacci(a));
         }
 
+        //3.7
+        [TestCase(1,1,1)]
+        [TestCase(2,4,2)]
+        [TestCase(12,16,4)]
+        [TestCase(10,25,5)]
+        [TestCase(-5,10,5)]
+        public void SearchGCDTest(int a, int b, int expected)
+        {
+            int actual = Cycles.SearchGCD(a,b);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0,0)]
+        [TestCase(0,1)]
+        [TestCase(1,0)]
+        public void SearchGCDTest_WhearAOrBIsEqualZero_ShuoldThrowArgumentException(int a, int b)
+        {
+            Assert.Throws<ArgumentException>(() => Cycles.SearchGCD(a,b));
+        }
     }
 }
