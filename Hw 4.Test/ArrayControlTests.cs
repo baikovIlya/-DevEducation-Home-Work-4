@@ -119,5 +119,30 @@ namespace Hw_4.Test
             Assert.AreEqual(expected, actual);
         }
 
+        //4.9
+        [TestCase(new int[] { }, new int[] { })]
+        [TestCase(new int[1] { 5}, new int[1] { 5})]
+        [TestCase(new int[2] { 5,3}, new int[2] {3,5 })]
+        [TestCase(new int[3] { 1,8,4}, new int[3] {1,4,8 })]
+        [TestCase(new int[4] { 0,-5,-6,9}, new int[4] {-6,-5,0,9 })]
+        [TestCase(new int[3] {2,2,2}, new int[3] { 2,2,2})]
+        public void SortAscendingTest(int[] ar, int[] expected)
+        {
+            int[] actual = ArrayControl.SortAscending(ar);
+            Assert.AreEqual(expected, actual);
+        }
+
+        //4.10
+        [TestCase(new int[] { }, new int[] { })]
+        [TestCase(new int[3] {8,5,6 }, new int[] {8,6,5 })]
+        [TestCase(new int[4] {0,3,-6,8 }, new int[] {8,3,0,-6 })]
+        [TestCase(new int[2] { 2,2}, new int[] {2,2 })]
+        [TestCase(new int[1] { 6}, new int[] { 6})]
+        [TestCase(new int[4] {-6,0,2,2 }, new int[] { 2,2,0,-6})]
+        public void SortDescendingTest(int[] ar, int[] expected)
+        {
+            int[] actual = ArrayControl.SortDescending(ar);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
