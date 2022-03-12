@@ -170,16 +170,16 @@ namespace Hw_4
         }
 
         //3.9
-        public static int SearchAmountOdd(int a)
+        public static int SearchAmountOdd(int nomber)
         {
             int tmp;
             int result = 0;
-            while (a != 0)
+            while (nomber != 0)
             {
-                tmp = a % 10;
+                tmp = nomber % 10;
                 if (tmp % 2 != 0)
                     result++;
-                a /= 10;
+                nomber /= 10;
             }
             return result;
         }
@@ -199,6 +199,10 @@ namespace Hw_4
         //3.11
         public static int[] SearchEvenNumbers(int n)
         {
+            if (n<1)
+            {
+                throw new ArgumentException("Only positive nombers");
+            }
             int amount_of_solution = 0;
             int even = 0; //чет
             int odd = 0;  //нечет
