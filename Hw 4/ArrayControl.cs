@@ -98,15 +98,22 @@ namespace Hw_4
         public static int[] Reverse(int[] ar)
         {
             int[] result = Copy(ar);
-            int leng = ar.Length - 1;
-            int tmp;
-            for (int i = 0; i <= leng/2; i++)
+            if (result.Length == 0)
             {
-                tmp = result[i];
-                result[i] = result[leng - i];
-                result[leng - i] = tmp;
+                return result;
             }
-            return result;
+            else
+            {
+                int leng = ar.Length - 1;
+                int tmp;
+                for (int i = 0; i <= leng / 2; i++)
+                {
+                    tmp = result[i];
+                    result[i] = result[leng - i];
+                    result[leng - i] = tmp;
+                }
+                return result;
+            }
         }
 
         //4.7

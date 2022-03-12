@@ -94,6 +94,20 @@ namespace Hw_4.Test
             Assert.AreEqual(expected, actual);
         }
 
+        //4.6
+        [TestCase(new int[] { },new int[] { })]
+        [TestCase(new int[3] {1,1,1 },new int[3] {1,1,1 })]
+        [TestCase(new int[4] {15,23,36,63 },new int[4] {63,36,23,15 })]
+        [TestCase(new int[1] { 45},new int[1] {45 })]
+        [TestCase(new int[2] {10,20 },new int[2] {20,10 })]
+        [TestCase(new int[2] {-10,20 },new int[2] {20,-10 })]
+        [TestCase(new int[2] {-55,-69 },new int[2] {-69,-55 })]
+        public void ReverseTest(int[] ar, int[] expected)
+        {
+            int[] actual = ArrayControl.Reverse(ar);
+            Assert.AreEqual(expected, actual);
+        }
+
         //4.7
         [TestCase(new int[4] { 1, 1, 3, 5 }, 4)]
         [TestCase(new int[2] { 6, 7 }, 1)]
