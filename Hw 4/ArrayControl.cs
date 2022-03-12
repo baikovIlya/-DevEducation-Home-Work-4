@@ -132,8 +132,7 @@ namespace Hw_4
             {
                 tmp = result[ar.Length - i - 1];
                 result[ar.Length - i - 1] = result[ar.Length/2 -i -1];
-                result[ar.Length/2 - i - 1] = tmp;
-                Write(result);
+                result[ar.Length/2 - i - 1] = tmp;                
             }
             return result;
         }

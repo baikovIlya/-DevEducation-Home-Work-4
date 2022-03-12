@@ -78,5 +78,46 @@ namespace Hw_4.Test
         {
             Assert.Throws<ArgumentException>(() => ArrayControl.GetIndexOfMax(ar));
         }
+
+        //4.5
+        [TestCase(new int[4] {1,1,3,5 },6)]
+        [TestCase(new int[2] {6,7 },7)]
+        [TestCase(new int[1] { 4},0)]
+        [TestCase(new int[] { },0)]
+        [TestCase(new int[3] {2,5,6 },5)]
+        [TestCase(new int[4] {1,0,2,0 },0)]
+        [TestCase(new int[4] {1,8,2,9 },17)]
+        [TestCase(new int[4] {1,5,2,5 },10)]
+        public void GetSummOfOddIndexTest(int[] ar, int expected)
+        {
+            int actual = ArrayControl.GetSummOfOddIndex(ar);
+            Assert.AreEqual(expected, actual);
+        }
+
+        //4.7
+        [TestCase(new int[4] { 1, 1, 3, 5 }, 4)]
+        [TestCase(new int[2] { 6, 7 }, 1)]
+        [TestCase(new int[1] { 4 }, 0)]
+        [TestCase(new int[] { }, 0)]
+        [TestCase(new int[3] { 2, 5, 6 }, 1)]
+        [TestCase(new int[4] { 1, 0, 2, 0 }, 1)]
+        public void GetSummOfOddTest(int[] ar, int expected)
+        {
+            int actual = ArrayControl.GetSummOfOdd(ar);
+            Assert.AreEqual(expected, actual);
+        }
+        
+        //4.8
+        [TestCase(new int[] { },new int[] { })]
+        [TestCase(new int[1] {1 },new int[1] {1 })]
+        [TestCase(new int[2] {1,2 },new int[2] { 2,1})]
+        [TestCase(new int[3] {11,45,23 },new int[3] {23,45,11 })]
+        [TestCase(new int[5] {10,20,30,40,50 },new int[5] {40,50,30,10,20 })]
+        public void ReverseOfHalfTest(int[]ar, int[] expected)
+        {
+            int[] actual = ArrayControl.ReverseOfHalf(ar);
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
