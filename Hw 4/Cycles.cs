@@ -102,6 +102,10 @@ namespace Hw_4
         //3.6
         public static int SearchFibonacci(int a)
         {
+            if (a<1)
+            {
+                throw new ArgumentException("Only positive nombers");
+            }
             int fib1 = 1;
             int fib2 = 1;
             int result = 1;
