@@ -125,6 +125,19 @@ namespace Hw_4.Test
             Assert.Throws<ArgumentException>(() => Cycles.SearchGCD(a, b));
         }
 
+        //3.8
+        [TestCase(0,0)]
+        [TestCase(1,1)]
+        [TestCase(-1,-1)]
+        [TestCase(8,2)]
+        [TestCase(125,5)]
+        [TestCase(-27,-3)]
+        public void SearchThirdRootTest(double nomber, double expected)
+        {
+            double actual = Cycles.SearchThirdRoot(nomber);
+            Assert.AreEqual(expected, actual);
+        }
+
         //3.9
         [TestCase(2, 0)]
         [TestCase(3, 1)]

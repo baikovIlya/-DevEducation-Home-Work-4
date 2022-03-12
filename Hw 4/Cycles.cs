@@ -149,24 +149,40 @@ namespace Hw_4
         }
 
         //3.8
-        public static int SearchThirdRoot(int a)
+        public static double SearchThirdRoot(double nomber)
         {
-            int leftSide = 0;
-            int rightSide = a;
-            int newLimit = 0;
-            while (leftSide * leftSide * leftSide != a && rightSide * rightSide * rightSide != a)
+            if (nomber == 0)
             {
-                newLimit = (leftSide + rightSide) / 2;
-                if (newLimit * newLimit * newLimit > a)
+                return 0;
+            }
+            else 
+            {
+                double leftSide = 0;
+                double rightSide = Math.Abs(nomber);
+                double newLimit = rightSide;
+                while (
+                      Math.Pow(leftSide, 3) != Math.Abs(nomber)
+                   && Math.Pow(rightSide, 3) != Math.Abs(nomber))
                 {
-                    rightSide = newLimit;
+                    newLimit = (leftSide + rightSide) / 2;
+                    if (Math.Pow(newLimit, 3) > Math.Abs(nomber))
+                    {
+                        rightSide = newLimit;
+                    }
+                    else
+                    {
+                        leftSide = newLimit;
+                    }
+                }
+                if (nomber < 0)
+                {
+                    return -newLimit;
                 }
                 else
                 {
-                    leftSide = newLimit;
+                    return newLimit;
                 }
             }
-            return newLimit;
         }
 
         //3.9
