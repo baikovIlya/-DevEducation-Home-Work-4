@@ -16,7 +16,7 @@ namespace Hw_4
             {
                 tmp *= a;
             }
-            if (b < 0)
+            if (b < 0 && tmp != 0)
             {
                 tmp = 1 / tmp;
             }
@@ -41,22 +41,35 @@ namespace Hw_4
         }
 
         //3.3
-        public static int GetSquears(int a)
+        public static int GetSquears(int nomber)
         {
-            int result = Convert.ToInt32(Math.Truncate(Math.Sqrt(a)));
+            int result = 0;
+            for (int i =1; i<nomber;i++)
+            {
+                if (i*i < nomber)
+                {
+                    result++;
+                }
+            }
             return result;
         }
 
         //3.4
-        public static int SearchLargestDivisor(int a)
+        public static int SearchLargestDivisor(int nomber)
         {
-            int tmp = 1;
-            for (int i = 2; i <= a / 2; i++)
+            int result = 1;
+            if (nomber == 0)
             {
-                if (a % i == 0)
-                    tmp = i;
+                throw new ArgumentException("Nomber = 0 it has no divisors");
             }
-            return tmp;
+            for (int i = 2; i <= Math.Abs(nomber / 2); i++)
+            {
+                if (nomber % i == 0)
+                {
+                    result = i;
+                }
+            }
+            return result;
         }
 
         //3.5

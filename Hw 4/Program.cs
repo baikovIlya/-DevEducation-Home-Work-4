@@ -9,8 +9,5 @@
 //int b = TwoDimArrayCtrl.CountElemsHigherThanNaibor(a);
 //Console.Write(b);
 
-double[] x = Condition.SolveQuadEquation(0,12,-7);
-for (int i = 0; i < x.Length; i++)
-{
-    Console.WriteLine(x[i]);
-}
+double x = Cycles.SearchLargestDivisor(-50);
+ Console.WriteLine(x);
