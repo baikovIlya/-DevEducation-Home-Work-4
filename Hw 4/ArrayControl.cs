@@ -11,6 +11,10 @@ namespace Hw_4
         //4.1
         public static int SearchMin(int[] ar)
         {
+            if (ar.Length == 0)
+            {
+                throw new ArgumentException("Empty archive has no min element");
+            }
             int min = ar[0];
             for (int i = 0; i < ar.Length; i++)
             {
@@ -25,6 +29,10 @@ namespace Hw_4
         //4.2
         public static int SearchMax(int[] ar)
         {
+            if (ar.Length == 0)
+            {
+                throw new ArgumentException("Empty archive has no max element");
+            }
             int max = ar[0];
             for (int i = 0; i < ar.Length; i++)
             {
@@ -39,6 +47,10 @@ namespace Hw_4
         //4.3
         public static int GetIndexOfMin(int[]ar)
         {
+            if (ar.Length == 0)
+            {
+                throw new ArgumentException("Empty archive has no min element");
+            }
             int min = ar[0];
             int index_of_min = 0;
             for (int i = 0; i < ar.Length; i++)
@@ -54,6 +66,10 @@ namespace Hw_4
         //4.4
         public static int GetIndexOfMax(int[] ar)
         {
+            if (ar.Length == 0)
+            {
+                throw new ArgumentException("Empty archive has no max element");
+            }
             int index_of_max = 0;
             int max = ar[0];
             for (int i = 0; i < ar.Length; i++)
@@ -94,12 +110,15 @@ namespace Hw_4
         }
 
         //4.7
-        public static int GetSummOfEvenIndex(int[] ar)
+        public static int GetSummOfOdd(int[] ar)
         {
             int result = 0;
-            for (int i = 0; i < ar.Length; i += 2)
+            for (int i = 0; i < ar.Length; i ++)
             {
-                result += ar[i];
+                if (ar[i]%2 == 1)
+                {
+                    result++;
+                }
             }
             return result;
         }
