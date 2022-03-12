@@ -13,7 +13,7 @@ namespace Hw_4
         {
             if (a > b)
             {
-                a += +b;
+                a += b;
             }
             else if (a == b)
             {
@@ -36,11 +36,11 @@ namespace Hw_4
             }
             else if (x > 0 && y > 0)
             {
-                result = "I четверь";
+                result = "I четверть";
             }
             else if (x < 0 && y > 0)
             {
-                result = "II четверь";
+                result = "II четверть";
             }
             else if (x < 0 && y < 0)
             {
