@@ -158,5 +158,16 @@ namespace Hw_4.Test
             int[] actual = ArrayControl.SortDescending(ar);
             Assert.AreEqual(expected, actual);
         }
+
+        //supporting methods
+        [TestCase(new int[] { },new int[] { })]
+        [TestCase(new int[2] {1,2 },new int[2] {1,2 })]
+        [TestCase(new int[4] {1,1,5,7 },new int[4] {1,1,5,7 })]
+        [TestCase(new int[1] {0 },new int[1] { 0})]
+        public void CopyTest(int[] ar, int[] expected)
+        {
+            int[] actual = ArrayControl.Copy(ar);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
