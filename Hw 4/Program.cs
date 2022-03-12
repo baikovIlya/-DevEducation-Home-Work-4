@@ -9,8 +9,5 @@
 //int b = TwoDimArrayCtrl.CountElemsHigherThanNaibor(a);
 //Console.Write(b);
 
-int[] x = Cycles.SearchEvenNumbers(23);
-for (int i = 0; i < x.Length; i++)
-{
-    Console.WriteLine(x[i]);
-}
+bool x = Cycles.SearchSameNombers(105,203);
+    Console.WriteLine(x);

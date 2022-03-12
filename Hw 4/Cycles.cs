@@ -264,6 +264,30 @@ namespace Hw_4
         public static bool SearchSameNombers(int a, int b)
         {
             bool flag = false;
+            if (a == b)
+            {
+                flag = true;
+            }
+            if (a == 0)
+            {
+                for(int i = b; i != 0; i /= 10)
+                {
+                    if(i%10 == 0)
+                    {
+                        flag = true;
+                    }
+                }
+            }
+            if (b == 0)
+            {
+                for(int i = a; i != 0; i /= 10)
+                {
+                    if(i % 10 == 0)
+                    {
+                        flag = true;
+                    }
+                }
+            }    
             while (a != 0)
             {
                 int tmp = a % 10;

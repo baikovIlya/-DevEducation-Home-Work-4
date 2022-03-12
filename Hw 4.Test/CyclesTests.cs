@@ -165,5 +165,22 @@ namespace Hw_4.Test
             Assert.Throws<ArgumentException>(() => Cycles.SearchEvenNumbers(n));
         }
 
+        //3.12
+        [TestCase(1,21,true)]
+        [TestCase(4,540,true)]
+        [TestCase(0,0,true)]
+        [TestCase(10,203,true)]
+        [TestCase(20,510,true)]
+        [TestCase(20,0,true)]
+        [TestCase(214,103,true)]
+        [TestCase(4,2,false)]
+        [TestCase(0,2,false)]
+        [TestCase(4,0,false)]
+        public void SearchSameNombersTest(int a, int b, bool expected)
+        {
+            bool actual = Cycles.SearchSameNombers(a, b);
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
