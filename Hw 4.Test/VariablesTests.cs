@@ -6,7 +6,7 @@ namespace Hw_4.Test
 {
     public class VariablesTests
     {
-
+        //1.1
         [TestCase(2,2,1,0)]
         [TestCase(5,2,2,1)]
         [TestCase(9,1,9,0)]
@@ -23,7 +23,6 @@ namespace Hw_4.Test
             Assert.AreEqual(expectedRes, actual2);
         }
 
-        
         [TestCase(-8,0)]
         [TestCase(0,0)]
         [TestCase(2,0)]
@@ -32,23 +31,25 @@ namespace Hw_4.Test
             Assert.Throws<ArgumentException>(() => Variables.DivAndRes(a,b, out int rez1, out int rez2));
         }
 
+        //1.2
         [TestCase(2,3,19)]
         [TestCase(4,8,21)]
         [TestCase(-7,-5,-5)]
-        public void EquationTest(int a,int b, double expected)
+        public void SolveTheEquationTest(int a,int b, double expected)
         {
-            double actual = Variables.Equation(a, b);
+            double actual = Variables.SolveTheEquation(a, b);
             Assert.AreEqual(expected, actual);
         }
 
         [TestCase(0,0)]
         [TestCase(2,2)]
         [TestCase(-5,-5)]
-        public void EquationTest_WhenAIsEqualB_ShouldThrowExeption(int a,int b)
+        public void SolveTheEquationTest_WhenAIsEqualB_ShouldThrowExeption(int a,int b)
         {
-            Assert.Throws<Exception>(() => Variables.Equation(a, b));
+            Assert.Throws<Exception>(() => Variables.SolveTheEquation(a, b));
         }
 
+        //1.4
         [TestCase(3,2,2,0)]
         [TestCase(4,5,8,0.75)]
         [TestCase(-5,2,10,-1.6)]
@@ -67,6 +68,7 @@ namespace Hw_4.Test
             Assert.Throws<Exception>(() => Variables.SearchX(a, b, c));
         }
 
+        //1.5
         [TestCase(2,2,4,4,"Y=1X+0")]
         [TestCase(3,4,2,5,"Y=-1X+7")]
         [TestCase(-5,6,3,4,"Y=-0,25X+4,75")]
@@ -78,12 +80,10 @@ namespace Hw_4.Test
             Assert.AreEqual(expected,actual);
         }
         
-        
-        
         [TestCase(10,5,10,7)]
         [TestCase(0,0,0,0)]
         [TestCase(1,-5,1,8)]
-        public void GetEquationTest_WhenX1IsEqualX2_ShouldThroawExeption(double x1, double y1, double x2, double y2)
+        public void GetEquationTest_WhenX1IsEqualX2_ShouldThroawArgumentExeption(double x1, double y1, double x2, double y2)
         {
             Assert.Throws<ArgumentException>(() => Variables.GetEquation(x1, y1, x2, y2));
         }

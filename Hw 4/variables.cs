@@ -20,7 +20,7 @@ namespace Hw_4
         }
         
         //1.2
-        public static double Equation(int a,int b)
+        public static double SolveTheEquation(int a,int b)
         {
             if (a == b)
             {
