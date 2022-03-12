@@ -9,5 +9,8 @@
 //int b = TwoDimArrayCtrl.CountElemsHigherThanNaibor(a);
 //Console.Write(b);
 
-double x = Cycles.SearchLargestDivisor(-50);
- Console.WriteLine(x);
+int[] x = Cycles.FindDivisibleNumbers(0);
+for (int i = 0; i < x.Length; i++)
+{
+    Console.WriteLine(x[i]);
+}

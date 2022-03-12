@@ -26,16 +26,20 @@ namespace Hw_4
         //3.2
         public static int[] FindDivisibleNumbers(int a)
         {
+            if (a==0)
+            {
+                throw new ArgumentException("A = 0 it has no divisors");
+            }
             int amont_of_solution = 0;
-            for (int i =a; i<1000; i+=a)
+            for (int i =Math.Abs(a); i<=1000; i+= Math.Abs(a))
             {
                 amont_of_solution++;
             }
             int[] result = new int[amont_of_solution];
-            result[0] = a;
+            result[0] = Math.Abs(a);
             for (int i =1; i<amont_of_solution; i++)
             {
-                result[i] =result[i-1] + a;
+                result[i] =result[i-1] + Math.Abs(a);
             }
             return result;
         }

@@ -24,6 +24,23 @@ namespace Hw_4.Test
             Assert.AreEqual(expected, actual);
         }
 
+        //3.2
+        [TestCase(200,new int[] {200,400,600,800,1000})]
+        [TestCase(600,new int[] {600})]
+        [TestCase(500,new int[] {500,1000})]
+        [TestCase(300,new int[] {300,600,900})]
+        [TestCase(-500,new int[] {500,1000})]
+        public void FindDivisibleNumbersTest(int a, int[] expected)
+        {
+            int[] actual = Cycles.FindDivisibleNumbers(a);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestCase(0)]
+        public void FindDivisibleNumbersTest_WhenAIsEqualZero_ShouldThrowArgumentException(int a)
+        {
+            Assert.Throws<ArgumentException>(() => Cycles.FindDivisibleNumbers(a));
+        }
+
         //3.3
         [TestCase(5,2)]
         [TestCase(10,3)]
@@ -70,5 +87,6 @@ namespace Hw_4.Test
             int actual = Cycles.GetSevens(a,b);
             Assert.AreEqual(expected, actual);
         }
+
     }
 }
