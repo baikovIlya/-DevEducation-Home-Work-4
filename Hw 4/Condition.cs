@@ -103,26 +103,45 @@ namespace Hw_4
         //2.4
         public static double[] SolveQuadEquation(double a, double b, double c)
         {
-            double[] result = new double[2];
-            double d = (b * b) - (4 * a * c);
-            if (d >= 0)
+            if (a ==0)
             {
+                throw new ArgumentException("If A = 0 then this is not a quadratic equation");
+            }
+            double d = (b * b) - (4 * a * c);
+            if (d > 0)
+            {
+                double[] result = new double[2];
                 result[0] = (-b + Math.Sqrt(d)) / (2 * a);
                 result[1] = (-b - Math.Sqrt(d)) / (2 * a);
+                return result;
             }
-            return result;
+            else if (d == 0)
+            {
+                double[] result = new double[1];
+                result[0] = (-b + Math.Sqrt(d)) / (2 * a);
+                return result;
+            }
+            else 
+            {
+                double[] result = new double[0];
+                return result;
+            }
         }
 
         //2.5
         public static string ConvertToInscription(int nomber)
         {
+            if (nomber < 10 || nomber >= 100)
+            {
+                throw new ArgumentException("Only 10-99 nombers");
+            }
             string result = "";
             if (nomber < 20)
             {
                 if (nomber == 10)
                     result = "Десять";
                 else if (nomber == 11)
-                    result = "Одиннадать";
+                    result = "Одиннадцать";
                 else if (nomber == 12)
                     result = "Двенадцть";
                 else if (nomber == 13)
@@ -145,7 +164,7 @@ namespace Hw_4
                 if (nomber >= 20 && nomber < 30)
                     result = "Двадцать";
                 else if (nomber >= 30 && nomber < 40)
-                    result = "Тридцацать";
+                    result = "Тридцать";
                 else if (nomber >= 40 && nomber < 50)
                     result = "Сорок";
                 else if (nomber >= 50 && nomber < 60)
@@ -159,23 +178,23 @@ namespace Hw_4
                 else if (nomber >= 90)
                     result = "Девяносто";
                 if (nomber % 10 == 1)
-                    result += " Один";
+                    result += " один";
                 else if (nomber % 10 == 2)
-                    result += " Два";
+                    result += " два";
                 else if (nomber % 10 == 3)
-                    result += " Три";
+                    result += " три";
                 else if (nomber % 10 == 4)
-                    result += " Четыре";
+                    result += " четыре";
                 else if (nomber % 10 == 5)
-                    result += " Пять";
+                    result += " пять";
                 else if (nomber % 10 == 6)
-                    result += " Шесть";
+                    result += " шесть";
                 else if (nomber % 10 == 7)
-                    result += " Семь";
+                    result += " семь";
                 else if (nomber % 10 == 8)
-                    result += " Восемь";
+                    result += " восемь";
                 else if (nomber % 10 == 9)
-                    result += " Девять";
+                    result += " девять";
             }
             return result;
         }

@@ -9,5 +9,8 @@
 //int b = TwoDimArrayCtrl.CountElemsHigherThanNaibor(a);
 //Console.Write(b);
 
-string x = Variables.GetEquation(2, 5, 2, 4);
-Console.WriteLine(x);
+double[] x = Condition.SolveQuadEquation(0,12,-7);
+for (int i = 0; i < x.Length; i++)
+{
+    Console.WriteLine(x[i]);
+}

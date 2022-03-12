@@ -87,5 +87,6 @@ namespace Hw_4.Test
         {
             Assert.Throws<ArgumentException>(() => Variables.GetEquation(x1, y1, x2, y2));
         }
+
     }
 }
