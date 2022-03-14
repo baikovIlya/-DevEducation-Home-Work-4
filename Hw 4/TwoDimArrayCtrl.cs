@@ -11,6 +11,10 @@ namespace Hw_4
         //5.1
         public static int SearchMin(int[,] ar)
         {
+            if (ar.GetLength(0) == 0 || ar.GetLength(1) == 0)
+            {
+                throw new ArgumentException("Empty array has no min element");
+            }
             int min = ar[0,0];
             for (int i = 0; i < ar.GetLength(0); i++)
             {
@@ -28,6 +32,10 @@ namespace Hw_4
         //5.2
         public static int SearchMax(int[,] ar)
         {
+            if (ar.GetLength(0) == 0 || ar.GetLength(1) == 0)
+            {
+                throw new ArgumentException("Empty array has no max element");
+            }
             int max = ar[0, 0];
             for (int i = 0; i < ar.GetLength(0); i++)
                 for (int j = 0; j < ar.GetLength(1); j++)
@@ -41,6 +49,10 @@ namespace Hw_4
         //5.3
         public static int[] SearchIndexOfMin(int[,] ar)
         {
+            if (ar.GetLength(0) == 0 || ar.GetLength(1) == 0)
+            {
+                throw new ArgumentException("Empty array has no min element");
+            }
             int[] result = new int[2] {0,0};
             int min = ar[0,0];
             for (int i = 0; i < ar.GetLength(0); i++)
@@ -61,6 +73,10 @@ namespace Hw_4
         //5.4
         public static int[] SearchIndexOfMax(int[,] ar)
         {
+            if (ar.GetLength(0) == 0 || ar.GetLength(1) == 0)
+            {
+                throw new ArgumentException("Empty array has no max element");
+            }
             int[] result = new int[2] { 0, 0 };
             int max = ar[0, 0];
             for (int i = 0; i < ar.GetLength(0); i++)

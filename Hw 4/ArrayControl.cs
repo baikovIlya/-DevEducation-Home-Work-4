@@ -13,7 +13,7 @@ namespace Hw_4
         {
             if (ar.Length == 0)
             {
-                throw new ArgumentException("Empty archive has no min element");
+                throw new ArgumentException("Empty array has no min element");
             }
             int min = ar[0];
             for (int i = 0; i < ar.Length; i++)

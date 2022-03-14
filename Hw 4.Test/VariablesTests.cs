@@ -49,6 +49,17 @@ namespace Hw_4.Test
             Assert.Throws<Exception>(() => Variables.SolveTheEquation(a, b));
         }
 
+        //1.3
+        [TestCase(12,23,23,12)]
+        [TestCase(11,11,11,11)]
+        [TestCase(50,20,20,50)]
+        public void SwapTest(ref int a, ref int b, int expectedA, int expectedB)
+        {
+            Variables.Swap(ref a, ref b);
+            Assert.AreEqual(expectedA, a);
+            Assert.AreEqual(expectedB, b);
+        }
+
         //1.4
         [TestCase(3,2,2,0)]
         [TestCase(4,5,8,0.75)]

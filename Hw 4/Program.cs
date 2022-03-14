@@ -1,5 +1,5 @@
 ﻿using Hw_4;
 
-int[] ar = new int[4] { -6, 0, 2, 2 };
-int[] r = ArrayControl.ReverseOfHalf(ar);
-ArrayControl.Write(r);
+int[,] ar = TwoDimArrayCtrl.GenerateRandom(0,0);
+int r = TwoDimArrayCtrl.SearchMax(ar);
+Console.WriteLine(r);
