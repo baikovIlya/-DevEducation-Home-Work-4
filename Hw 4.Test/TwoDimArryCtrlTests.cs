@@ -22,6 +22,13 @@ namespace Hw_4.Test
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(TDAMockType.Empty)]
+        public void SearchMinTest_WhenArrayIsEmpty_ShouldThrowArgumentException(TDAMockType type)
+        {
+            int[,] ar = TDAMock.GetMock(type);
+            Assert.Throws<ArgumentException>(() => TwoDimArrayCtrl.SearchMin(ar));
+        }
+
         //5.2
         [TestCase(TDAMockType.One, 1)]
         [TestCase(TDAMockType.Quadtwo, 33)]
@@ -33,6 +40,13 @@ namespace Hw_4.Test
             int[,] ar = TDAMock.GetMock(type);
             int actual = TwoDimArrayCtrl.SearchMax(ar);
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(TDAMockType.Empty)]
+        public void SearchMaxTest_WhenArrayIsEmpty_ShouldThrowArgumentException(TDAMockType type)
+        {
+            int[,] ar = TDAMock.GetMock(type);
+            Assert.Throws<ArgumentException>(() => TwoDimArrayCtrl.SearchMax(ar));
         }
 
         //5.3
@@ -48,6 +62,13 @@ namespace Hw_4.Test
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(TDAMockType.Empty)]
+        public void SearchIndexOfMinTest_WhenArrayIsEmpty_ShouldThrowArgumentException(TDAMockType type)
+        {
+            int[,] ar = TDAMock.GetMock(type);
+            Assert.Throws<ArgumentException>(() => TwoDimArrayCtrl.SearchIndexOfMin(ar));
+        }
+
         //5.4
         [TestCase(TDAMockType.One, new int[] { 0, 0 })]
         [TestCase(TDAMockType.Quadtwo, new int[] { 1,1 })]
@@ -56,9 +77,18 @@ namespace Hw_4.Test
         [TestCase(TDAMockType.ThreeByFour, new int[] { 1, 3 })]
         public void SearchindexOfMaXTest(TDAMockType type, int[] expected)
         {
-            int[,] ar = TDAMock.GetMock(type);
-            int[] actual = TwoDimArrayCtrl.SearchIndexOfMax(ar);
+            int[] actual = TwoDimArrayCtrl.SearchIndexOfMax(TDAMock.GetMock(type));
             Assert.AreEqual(expected, actual);
         }
+
+
+        [TestCase(TDAMockType.Empty)]
+        public void SearchIndexOfMaxTest_WhenArrayIsEmpty_ShouldThrowArgumentException(TDAMockType type)
+        {
+            int[,] ar = TDAMock.GetMock(type);
+            Assert.Throws<ArgumentException>(() => TwoDimArrayCtrl.SearchIndexOfMax(ar));
+        }
+
+        
     }
 }
