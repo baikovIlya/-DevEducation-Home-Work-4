@@ -154,6 +154,7 @@ namespace Hw_4.Test
         //3.10
         [TestCase(132, 231)]
         [TestCase(1000, 1)]
+        [TestCase(-7895, -5987)]
         [TestCase(984, 489)]
         [TestCase(3, 3)]
         public void MirrorNomberTest(int nomber, int expected)

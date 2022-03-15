@@ -89,6 +89,31 @@ namespace Hw_4.Test
             Assert.Throws<ArgumentException>(() => TwoDimArrayCtrl.SearchIndexOfMax(ar));
         }
 
-        
+        //5.5
+        [TestCase(TDAMockType.Empty,0)]
+        [TestCase(TDAMockType.One,1)]
+        [TestCase(TDAMockType.Quadtwo,1)]
+        [TestCase(TDAMockType.Quadthree,2)]
+        [TestCase(TDAMockType.Quadfour,5)]
+        [TestCase(TDAMockType.ThreeByFour,2)]
+        public void CountElemsHigherThanNaiborTest(TDAMockType type, int expected)
+        {
+            int[,] ar = TDAMock.GetMock(type);
+            int actual = TwoDimArrayCtrl.CountElemsHigherThanNaibor(ar);
+            Assert.AreEqual(expected, actual);
+        }
+
+        //5.6
+        [TestCase(TDAMockType.One, TDAMockType.One)]
+        [TestCase(TDAMockType.Empty, TDAMockType.Empty)]
+        [TestCase(TDAMockType.Quadthree, TDAMockType.QuadthreeDiagReverse)]
+        [TestCase(TDAMockType.Quadfour, TDAMockType.QuadfourDiagReverse)]
+        public void FlipDiagonallyTest(TDAMockType actual_type, TDAMockType expected_type)
+        {
+            int[,] ar = TDAMock.GetMock(actual_type);
+            int [,] expected = TDAMock.GetMock(expected_type);
+            int[,] actual = TwoDimArrayCtrl.FlipDiagonally(ar);
+            Assert.AreEqual(expected,actual);
+        }
     }
 }

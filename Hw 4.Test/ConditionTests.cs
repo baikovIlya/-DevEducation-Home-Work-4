@@ -77,6 +77,7 @@ namespace Hw_4.Test
         [TestCase(10,"Десять")]
         [TestCase(11,"Одиннадцать")]
         [TestCase(30,"Тридцать")]
+        [TestCase(35,"Тридцать пять")]
         [TestCase(99,"Девяносто девять")]
         public void ConvertToInscriptionTest(int nomber, string expected)
         {
@@ -88,7 +89,7 @@ namespace Hw_4.Test
         [TestCase(8)]
         [TestCase(-5)]
         [TestCase(120)]
-        public void ConvertToInscriptionTest_WhanNomber_Less_Than_Ten_Or_More_Than_One_Hundred__ShouldThroawArgumentExeption(int nomber)
+        public void ConvertToInscriptionTest_WhanNomberLessThanTenOrMoreThanOneHundred_ShouldThroawArgumentExeption(int nomber)
         {
             Assert.Throws<ArgumentException>(() => Condition.ConvertToInscription(nomber));
         }

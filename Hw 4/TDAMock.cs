@@ -53,7 +53,7 @@ namespace Hw_4
                     return new int[3, 4] {
                         {10,20,30,40},
                         {45,65,56,90},
-                        {0,0,6,71}
+                        {0 ,0 ,6 ,71}
                         };
                 default:
                     throw new ArgumentException("Missing Mock type");

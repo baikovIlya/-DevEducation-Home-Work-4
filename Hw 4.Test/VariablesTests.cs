@@ -53,6 +53,7 @@ namespace Hw_4.Test
         [TestCase(12,23,23,12)]
         [TestCase(11,11,11,11)]
         [TestCase(50,20,20,50)]
+        [TestCase(-50,20,20,-50)]
         public void SwapTest(int a, int b, int expectedA, int expectedB)
         {
             Variables.Swap(ref a, ref b);
