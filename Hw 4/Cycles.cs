@@ -191,13 +191,13 @@ namespace Hw_4
         //3.10
         public static int MirrorNumber(int a)
         {
-            int tmp1 = 0;
+            int result = 0;
             while (a != 0)
             {
-                tmp1 = tmp1 * 10 + a % 10;
+                result = result * 10 + a % 10;
                 a /= 10;
             }
-            return tmp1;
+            return result;
         }
 
         //3.11
