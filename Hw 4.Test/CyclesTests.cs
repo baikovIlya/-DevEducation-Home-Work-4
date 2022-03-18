@@ -186,6 +186,7 @@ namespace Hw_4.Test
         [TestCase(10,203,true)]
         [TestCase(20,510,true)]
         [TestCase(20,0,true)]
+        [TestCase(0,20,true)]
         [TestCase(214,103,true)]
         [TestCase(4,2,false)]
         [TestCase(0,2,false)]

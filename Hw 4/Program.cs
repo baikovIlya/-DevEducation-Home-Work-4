@@ -1,3 +1,3 @@
 ﻿using Hw_4;
 
-Console.WriteLine(Cycles.MirrorNumber(-42));
+Console.WriteLine(13);

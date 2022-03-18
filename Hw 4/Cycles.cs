@@ -80,20 +80,15 @@ namespace Hw_4
         public static int GetSevens(int a, int b)
         {
             int result = 0;
-            if (a < b)
+            if (b < a)
             {
-                for (int i = a; i <= b; i++)
-                {
-                    if (i % 7 == 0)
-                        result += i;
-                }
+                Variables.Swap(ref a, ref b);
             }
-            else
+            for (int i = a; i <= b; i++)
             {
-                for (int i = b; i <= a; i++)
+                if (i % 7 == 0)
                 {
-                    if (i % 7 == 0)
-                        result += i;
+                    result += i;
                 }
             }
             return result;
@@ -277,6 +272,10 @@ namespace Hw_4
             {
                 flag = true;
             }
+            if ( b == 0)
+            {
+                Variables.Swap(ref a, ref b);
+            }
             if (a == 0)
             {
                 for(int i = b; i != 0; i /= 10)
@@ -287,16 +286,6 @@ namespace Hw_4
                     }
                 }
             }
-            if (b == 0)
-            {
-                for(int i = a; i != 0; i /= 10)
-                {
-                    if(i % 10 == 0)
-                    {
-                        flag = true;
-                    }
-                }
-            }    
             while (a != 0)
             {
                 int tmp = a % 10;
